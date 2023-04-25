@@ -1,0 +1,16 @@
+services:
+
+  ui:
+    image: com.tradetaj.ui
+    restart: always
+    ports:
+      - "8002:80"
+    networks:
+      - proxy-network
+      - tradetaj_trade-network
+
+networks:
+  proxy-network:
+    external: true
+  tradetaj_trade-network:
+    external: true
